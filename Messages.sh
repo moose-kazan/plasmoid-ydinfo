@@ -1,2 +1,4 @@
-#! /usr/bin/env bash
-$XGETTEXT `find . -name \*.qml` -o $podir/plasma_applet_org.kde.plasma.plasmoidydinfo.pot
+#!/bin/bash
+cd `dirname $0`
+
+xgettext `find package -name \*.qml` -o package/translate/com.ylsoftware.ydinfo.pot
