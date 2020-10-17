@@ -14,25 +14,53 @@ Item {
 	property string valueTotal: ''
 	property real valueOpacity: 0
 	Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.fullRepresentation: ColumnLayout {
+    Plasmoid.fullRepresentation: GridLayout {
         anchors.fill: parent
+        rows: 4
+        columns: 2
         PlasmaComponents.Label {
-			id: ydTitle
             Layout.alignment: Qt.AlignCenter
+            Layout.columnSpan: 2
+            Layout.rowSpan: 1
+            Layout.row: 1
+            Layout.column: 1
             text: qsTr('Yandex.Disk usage')
         }
         PlasmaComponents.Label {
-			id: ydTotal
 			Layout.alignment: Qt.AlignLeft
+            Layout.columnSpan: 1
+            Layout.rowSpan: 1
+            Layout.row: 2
+            Layout.column: 1
+            Layout.fillWidth: true
 			text: valueTotal
 		}
 		PlasmaComponents.Label {
-			id: ydUsed
 			Layout.alignment: Qt.AlignLeft
+            Layout.columnSpan: 1
+            Layout.rowSpan: 1
+            Layout.row: 3
+            Layout.column: 1
+            Layout.fillWidth: true
 			text: valueUsed
+		}
+        Image {
+			Layout.alignment: Qt.AlignRight
+            Layout.columnSpan: 1
+            Layout.rowSpan: 2
+            Layout.row: 2
+            Layout.column: 2
+            fillMode: Image.PreserveAspectFit
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            source: "../images/yandexdisk.svg"
 		}
         PlasmaComponents.ProgressBar {
 			Layout.alignment: Qt.AlignLeft
+            Layout.columnSpan: 2
+            Layout.rowSpan: 1
+            Layout.row: 4
+            Layout.column: 1
 			minimumValue: 0
 			maximumValue: 100
 			value: valueOpacity
