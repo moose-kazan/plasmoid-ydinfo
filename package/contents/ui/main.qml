@@ -1,6 +1,6 @@
 /*
-    SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
-    SPDX-License-Identifier: LGPL-2.1-or-later
+    SPDX-FileCopyrightText: 2020 Vadim Kalinnikov <moose@ylsoftware.com>
+    SPDX-License-Identifier: LGPL-2.1
 */
 
 import QtQuick 2.1
@@ -14,7 +14,7 @@ Item {
 	property string valueTotal: ''
 	property real valueOpacity: 0
 	Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.fullRepresentation: GridLayout {
+	Plasmoid.fullRepresentation: GridLayout {
         anchors.fill: parent
         rows: 4
         columns: 2
@@ -66,35 +66,43 @@ Item {
 			value: valueOpacity
 		}
     }
+    
     PlasmaCore.DataSource {
 		id: ydStatus
 		engine: "executable"
-		interval: 300000
+		interval: plasmoid.configuration.UpdateInterval*60000
 		connectedSources: [
-			'/bin/sh -c "env LANG=C yandex-disk status"'
+			(
+				'/bin/sh -c "env LANG=C yandex-disk %1 status"'
+			).arg(plasmoid.configuration.AdditionalParams)
 		]
 		onNewData: {
 			var stdout = data["stdout"]
 			//console.debug(stdout)
-			var raw_used = stdout.match(/Used: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
-			var raw_total = stdout.match(/Total: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
-			
-			var yd_used = qsTr("Data not fetched")
-			var yd_total = qsTr("Data not fetched")
-			if (raw_used.length == 3 && raw_total.length == 3) {
-				yd_used = qsTr("Used: %1 %2").arg(raw_used[1]).arg(raw_used[2])
-				yd_total = qsTr("Total: %1 %2").arg(raw_total[1]).arg(raw_total[2])
+			try {
+				var raw_used = stdout.match(/Used: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
+				var raw_total = stdout.match(/Total: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
+				
+				var yd_used = qsTr("Data not fetched")
+				var yd_total = qsTr("Data not fetched")
+				if (raw_used.length == 3 && raw_total.length == 3) {
+					yd_used = qsTr("Used: %1 %2").arg(raw_used[1]).arg(raw_used[2])
+					yd_total = qsTr("Total: %1 %2").arg(raw_total[1]).arg(raw_total[2])
+				}
+				//console.log(yd_used)
+				//console.log(yd_total)
+				
+				valueUsed = yd_used
+				valueTotal = yd_total
+				
+				var yd_used_num = formatSrcNum(raw_used[1], raw_used[2])
+				var yd_total_num = formatSrcNum(raw_total[1], raw_total[2])
+				valueOpacity = yd_used_num * 100 / yd_total_num
+				//console.log(valueOpacity)
 			}
-			//console.log(yd_used)
-			//console.log(yd_total)
-			
-			valueUsed = yd_used
-			valueTotal = yd_total
-			
-			var yd_used_num = formatSrcNum(raw_used[1], raw_used[2])
-			var yd_total_num = formatSrcNum(raw_total[1], raw_total[2])
-			valueOpacity = yd_used_num * 100 / yd_total_num
-			//console.log(valueOpacity)
+			catch(error) {
+				console.log("Problem with data from yandex-disk service!")
+			}
 		}
 		
 		function formatSrcNum(n, k) {

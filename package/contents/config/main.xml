@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+		http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+	<kcfgfile name=""/>
+	<group name="General">
+		<entry name="UpdateInterval" type="Int">
+			<label>Update info every ... minutes</label>
+			<min>1</min>
+			<max>10</max>
+			<default>5</default>
+		</entry>
+		<entry name="AdditionalParams" type="String">
+			<label>Additional params for &quot;yandex-disk status&quot; command</label>
+			<default></default>
+		</entry>
+	</group>
+</kcfg>

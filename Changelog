@@ -1,0 +1,7 @@
+v0.0.2 (2020-10-31) Vadim Kalinnikov <moose@ylsoftware.com>
+    * Switch from CMake to Make
+    * Added Configuration dialog
+
+
+v0.0.1 (2020-10-17) Vadim Kalinnikov <moose@ylsoftware.com>
+    * First version
