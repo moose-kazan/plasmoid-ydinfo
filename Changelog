@@ -1,3 +1,8 @@
+v0.0.3 (2021-03-13) Vadim Kalinnikov <moose@ylsoftware.com>
+	* Return to CMake
+	* Support for translations
+	* Russian translation
+
 v0.0.2 (2020-10-31) Vadim Kalinnikov <moose@ylsoftware.com>
     * Switch from CMake to Make
     * Added Configuration dialog

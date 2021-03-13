@@ -26,7 +26,7 @@ Item {
 		rows: 3
 		columns: 2
 		QtControls.Label {
-			text: qsTr("Additional params for \"yandex-disk status\" command:")
+			text: i18n("Additional params for \"yandex-disk status\" command:")
             Layout.row: 1
             Layout.column: 1
             Layout.alignment: Qt.AlignLeft
@@ -39,7 +39,7 @@ Item {
             Layout.fillWidth: true
 		}
 		QtControls.Label {
-			text: qsTr("Update info every ... minutes:")
+			text: i18n("Update info every ... minutes:")
             Layout.row: 2
             Layout.column: 1
             Layout.alignment: Qt.AlignLeft

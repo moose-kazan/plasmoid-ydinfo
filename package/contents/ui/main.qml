@@ -24,7 +24,7 @@ Item {
             Layout.rowSpan: 1
             Layout.row: 1
             Layout.column: 1
-            text: qsTr('Yandex.Disk usage')
+            text: i18n('Yandex.Disk usage')
         }
         PlasmaComponents.Label {
 			Layout.alignment: Qt.AlignLeft
@@ -83,11 +83,11 @@ Item {
 				var raw_used = stdout.match(/Used: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
 				var raw_total = stdout.match(/Total: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
 				
-				var yd_used = qsTr("Data not fetched")
-				var yd_total = qsTr("Data not fetched")
+				var yd_used = i18n("Data not fetched")
+				var yd_total = i18n("Data not fetched")
 				if (raw_used.length == 3 && raw_total.length == 3) {
-					yd_used = qsTr("Used: %1 %2").arg(raw_used[1]).arg(raw_used[2])
-					yd_total = qsTr("Total: %1 %2").arg(raw_total[1]).arg(raw_total[2])
+					yd_used = i18n("Used: %L1 %L2").arg(raw_used[1]).arg(raw_used[2])
+					yd_total = i18n("Total: %L1 %L2").arg(raw_total[1]).arg(raw_total[2])
 				}
 				//console.log(yd_used)
 				//console.log(yd_total)
