@@ -1,4 +1,4 @@
-plasmoid-ydinfo (0.0.3) unstable; urgency=medium
+plasmoid-ydinfo (0.0.3) none; urgency=medium
 
   * Initial release with dpkg
 

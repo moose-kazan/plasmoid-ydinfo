@@ -2,11 +2,16 @@ Source: plasmoid-ydinfo
 Section: utils
 Priority: optional
 Maintainer: Vadim Kalinnikov <moose@ylsoftware.com>
-Build-Depends: debhelper (>= 7), cmake, plasma-framework
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 7), cmake, plasma-framework, pkg-kde-tools
+Standards-Version: 4.5.0
 Homepage: https://github.com/moose-kazan/plasmoid-ydinfo
+Vcs-Git: https://github.com/moose-kazan/plasmoid-ydinfo.git
+Vcs-Browser: https://github.com/moose-kazan/plasmoid-ydinfo.git
 
 Package: plasmoid-ydinfo
 Architecture: any
-Depends: plasma-framework
+Depends: plasma-framework, ${misc:Depends}
 Description: Show info about your Yandex.Disk account
+ It's just run "yandex-disk status" every five (configurable)
+ minutes and parse output to show full size of disk and free
+ space.
