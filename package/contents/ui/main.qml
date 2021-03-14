@@ -13,7 +13,28 @@ Item {
 	property string valueUsed: ''
 	property string valueTotal: ''
 	property real valueOpacity: 0
+	
+	Plasmoid.switchHeight: 120
+	Plasmoid.switchWidth: 430
 	Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+	Plasmoid.compactRepresentation: RowLayout {
+		anchors.fill: parent
+        Image {
+			id: compactLogo
+			Layout.alignment: Qt.AlignLeft
+            fillMode: Image.PreserveAspectFit
+            Layout.fillHeight: true
+            //Layout.fillWidth: true
+            source: "../images/yandexdisk.svg"
+		}
+        PlasmaComponents.ProgressBar {
+			Layout.alignment: Qt.AlignRight
+			minimumValue: 0
+			maximumValue: 100
+			value: valueOpacity
+		}
+	}
+	
 	Plasmoid.fullRepresentation: GridLayout {
         anchors.fill: parent
         rows: 4
