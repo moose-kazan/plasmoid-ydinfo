@@ -1,0 +1,12 @@
+Source: plasmoid-ydinfo
+Section: utils
+Priority: optional
+Maintainer: Vadim Kalinnikov <moose@ylsoftware.com>
+Build-Depends: debhelper (>= 7), cmake, plasma-framework
+Standards-Version: 3.9.6
+Homepage: https://github.com/moose-kazan/plasmoid-ydinfo
+
+Package: plasmoid-ydinfo
+Architecture: any
+Depends: plasma-framework
+Description: Show info about your Yandex.Disk account

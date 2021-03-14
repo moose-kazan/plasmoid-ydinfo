@@ -1,0 +1,5 @@
+plasmoid-ydinfo (0.0.3) unstable; urgency=medium
+
+  * Initial release with dpkg
+
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 14 Mar 2021 214:26:00 +0300

@@ -14,7 +14,7 @@ Item {
 	property string valueTotal: ''
 	property real valueOpacity: 0
 	
-	Plasmoid.switchHeight: 120
+	Plasmoid.switchHeight: 100
 	Plasmoid.switchWidth: 430
 	Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 	Plasmoid.compactRepresentation: RowLayout {
