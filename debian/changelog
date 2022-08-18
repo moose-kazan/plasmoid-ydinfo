@@ -1,5 +1,5 @@
-plasmoid-ydinfo (0.0.3) none; urgency=medium
+plasmoid-ydinfo (0.0.3-ppa3) jammy; urgency=medium
 
   * Initial release with dpkg
 
- -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 14 Mar 2021 14:26:00 +0300
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 18 Aug 2022 15:21:00 +0300

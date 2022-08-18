@@ -1,6 +1,6 @@
 v0.0.3 (2021-03-14) Vadim Kalinnikov <moose@ylsoftware.com>
 	* Return to CMake
-	^ Added compact representation
+	* Added compact representation
 	* Support for translations
 	* Russian translation
 	* Added support for building debian package
