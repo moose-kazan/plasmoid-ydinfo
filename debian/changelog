@@ -1,5 +1,11 @@
+plasmoid-ydinfo (0.0.4-ppa2) jammy; urgency=medium
+
+  * Small UI fixes
+
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 18 Aug 2022 07:31:00 +0300
+
 plasmoid-ydinfo (0.0.3-ppa3) jammy; urgency=medium
 
   * Initial release with dpkg
 
- -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 18 Aug 2022 15:21:00 +0300
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 18 Aug 2022 05:21:00 +0300

@@ -27,34 +27,34 @@ Item {
 		columns: 2
 		QtControls.Label {
 			text: i18n("Additional params for \"yandex-disk status\" command:")
-            Layout.row: 1
-            Layout.column: 1
+            Layout.row: 0
+            Layout.column: 0
             Layout.alignment: Qt.AlignLeft
 		}
 		QtControls.TextField {
 			id: cfgAdditionalParams
-            Layout.row: 1
-            Layout.column: 2
+            Layout.row: 0
+            Layout.column: 1
             Layout.alignment: Qt.AlignLeft
             Layout.fillWidth: true
 		}
 		QtControls.Label {
 			text: i18n("Update info every ... minutes:")
-            Layout.row: 2
-            Layout.column: 1
+            Layout.row: 1
+            Layout.column: 0
             Layout.alignment: Qt.AlignLeft
 		}
 		QtControls.SpinBox {
 			id: cfgUpdateInterval
-            Layout.row: 2
-            Layout.column: 2
+            Layout.row: 1
+            Layout.column: 1
             Layout.alignment: Qt.AlignLeft
             minimumValue: 1
             maximumValue: 10
 		}
 		Row {
-			Layout.row: 3
-			Layout.column: 1
+			Layout.row: 2
+			Layout.column: 0
 			Layout.columnSpan: 2
 			Layout.alignment: Qt.AlignLeft
 			Layout.fillHeight: true

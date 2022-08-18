@@ -1,3 +1,6 @@
+v0.0.4 (2022-08-18) Vadim Kalinnikov <moose@ylsoftware.com>
+	* UI fixes
+
 v0.0.3 (2021-03-14) Vadim Kalinnikov <moose@ylsoftware.com>
 	* Return to CMake
 	* Added compact representation
