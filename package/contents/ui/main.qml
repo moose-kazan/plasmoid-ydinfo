@@ -13,6 +13,7 @@ Item {
     property string valueUsed: ''
     property string valueTotal: ''
     property real valueOpacity: 0
+    property string yandexDiskDirectory: ''
 
     Plasmoid.switchHeight: 100
     Plasmoid.switchWidth: 400
@@ -28,6 +29,16 @@ Item {
             //width: rootCompact.height
             //height: rootCompact.height
             source: "../images/yandexdisk-small.svg"
+            MouseArea {
+                anchors.fill: parent;
+                hoverEnabled: true;
+                cursorShape: Qt.PointingHandCursor;
+                onClicked: (mouse)=> {
+                    if (yandexDiskDirectory != "") {
+                        Qt.openUrlExternally(yandexDiskDirectory)
+                    }
+                }
+            }
         }
         PlasmaComponents.ProgressBar {
             //Layout.alignment: Qt.AlignRight
@@ -84,6 +95,16 @@ Item {
             Layout.fillHeight: true
             Layout.fillWidth: true
             source: "../images/yandexdisk.svg"
+            MouseArea {
+                anchors.fill: parent;
+                hoverEnabled: true;
+                cursorShape: Qt.PointingHandCursor;
+                onClicked: (mouse)=> {
+                    if (yandexDiskDirectory != "") {
+                        Qt.openUrlExternally(yandexDiskDirectory)
+                    }
+                }
+            }
         }
         PlasmaComponents.ProgressBar {
             Layout.alignment: Qt.AlignLeft
@@ -113,6 +134,8 @@ Item {
             try {
                 var raw_used = stdout.match(/Used: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
                 var raw_total = stdout.match(/Total: ([0-9]+(?:\.[0-9]+)?) ([KMGT]B)/)
+                var raw_dir = stdout.match(/Path to Yandex.Disk directory: '(.+)'/)
+                console.log(raw_dir)
                 
                 var yd_used = i18n("Data not fetched")
                 var yd_total = i18n("Data not fetched")
@@ -122,6 +145,10 @@ Item {
                 }
                 //console.log(yd_used)
                 //console.log(yd_total)
+                
+                if (raw_dir.length == 2) {
+                    yandexDiskDirectory = raw_dir[1]
+                }
                 
                 valueUsed = yd_used
                 valueTotal = yd_total

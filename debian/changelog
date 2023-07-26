@@ -1,3 +1,11 @@
+plasmoid-ydinfo (0.0.5-ppa1) jammy; urgency=medium
+
+  * Open disk directory by click on icon
+  * Added make file
+  * Update metadata (desktop -> json)
+
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 26 Jul 2023 08:54:00 +0300
+
 plasmoid-ydinfo (0.0.4-ppa2) jammy; urgency=medium
 
   * Small UI fixes
