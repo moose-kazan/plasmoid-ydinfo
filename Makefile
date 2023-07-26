@@ -20,8 +20,8 @@ test:
 deb:
 	dpkg-buildpackage -rfakeroot --build=source
 
-ppa-push:
+ppa-push: deb
 	${eval DEBVERSION=${shell head -n 1 debian/changelog | sed -r 's/[^(]*\((.*)\).*/\1/'}}
-	echo dput ppa:bulvinkl/ppa ../plasmoid-ydinfo_${DEBVERSION}_source.changes
+	dput ppa:bulvinkl/ppa ../plasmoid-ydinfo_${DEBVERSION}_source.changes
 
 	
