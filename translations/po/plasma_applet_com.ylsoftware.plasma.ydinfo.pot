@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmoidydinfo 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-13 15:29+0300\n"
+"POT-Creation-Date: 2023-07-26 18:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: package/contents/ui/configGeneral.qml:29
+#: package/contents/ui/configGeneral.qml:29
 msgid "Additional params for \"yandex-disk status\" command:"
 msgstr ""
 
+#: package/contents/ui/configGeneral.qml:42
 #: package/contents/ui/configGeneral.qml:42
 msgid "Update info every ... minutes:"
 msgstr ""
 
 #: package/contents/ui/main.qml:86 package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:140 package/contents/ui/main.qml:141
 msgid "Data not fetched"
 msgstr ""
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:89 package/contents/ui/main.qml:143
 msgid "Used: %L1 %L2"
 msgstr ""
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:90 package/contents/ui/main.qml:144
 msgid "Total: %L1 %L2"
 msgstr ""
 
-#: package/contents/config/config.qml:6
+#: package/contents/config/config.qml:6 package/contents/config/config.qml:6
 msgid "General"
 msgstr ""

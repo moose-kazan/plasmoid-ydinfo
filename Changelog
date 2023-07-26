@@ -1,3 +1,7 @@
+v0.0.6 (2023-07-26) Vadim Kalinnikov <moose@ylsoftware.com>
+    * Added dutch translation. Thanks to Heimen Stoffels <vistausss@fastmail.com>
+    * Improved some translations
+
 v0.0.5 (2023-07-26) Vadim Kalinnikov <moose@ylsoftware.com>
 	* Open disk directory by click on icon
 	* Added make file

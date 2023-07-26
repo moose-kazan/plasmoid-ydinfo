@@ -1,3 +1,10 @@
+plasmoid-ydinfo (0.0.6-ppa1) jammy; urgency=medium
+
+  * Added dutch translation. Thanks to Heimen Stoffels <vistausss@fastmail.com>
+  * Improved some translations
+
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Sun, 26 Jul 2023 18:54:00 +0300
+
 plasmoid-ydinfo (0.0.5-ppa1) jammy; urgency=medium
 
   * Open disk directory by click on icon
