@@ -2,10 +2,11 @@
 
 help:
 	@echo "Available targets:"
-	@echo "build - build plasmoid"
-	@echo "clean - cleanup build directory"
-	@echo "test  - run plasmoid in test mode"
-	@echo "help  - show this help"
+	@echo "build   - build plasmoid"
+	@echo "clean   - cleanup build directory"
+	@echo "test    - run plasmoid in test mode"
+	@echo "package - build zip archive"
+	@echo "help    - show this help"
 
 
 build:
@@ -29,8 +30,15 @@ ppa-push: deb
 package:
 	${eval PKGVERSION=${shell git tag -l|sort|tail -n 1|sed 's/v//'}}
 	${eval TMPDIR=${shell mktemp -d}}
+	${eval PKGBUILDDIR="${TMPDIR}/ydinfo-${PKGVERSION}"}
 	${eval CWD=${shell pwd}}
-	cp -r package ${TMPDIR}/ydinfo-${PKGVERSION}
+	cp -r package ${PKGBUILDDIR}
+	${foreach t,${wildcard translations/po/*.po}, \
+		${eval CURRENT_LOCALE=${shell echo ${t} | sed -r 's/.*([a-z][a-z]).po/\1/'}} \
+		${eval PROJECT_NAME=${shell echo ${t} | sed -r 's/.*\/([^\/]*)_[a-z][a-z].po/\1/'}} \
+		mkdir -p "${PKGBUILDDIR}/locale/${CURRENT_LOCALE}/LC_MESSAGES" ; \
+		msgfmt -o "${PKGBUILDDIR}/locale/${CURRENT_LOCALE}/LC_MESSAGES/${CURRENT_LOCALE}.mo" ${t} ; \
+	}
 	cd ${TMPDIR} && zip -r ${CWD}/../ydinfo-${PKGVERSION}.zip ydinfo-${PKGVERSION}
 	rm -rf ${TMPDIR}
 	@echo "Packed into ../ydinfo-${PKGVERSION}.zip"
