@@ -165,16 +165,16 @@ Item {
         
         function formatSrcNum(n, k) {
             if (k == "TB") {
-                k = k*1024*1024*1024*1024
+                n = n*1024*1024*1024*1024
             }
             else if (k == "GB") {
-                k = k*1024*1024*1024
+                n = n*1024*1024*1024
             }
             else if (k == "MB") {
-                k = k*1024*1024
+                n = n*1024*1024
             }
             else if (k == "KB") {
-                k = k*1024
+                n = n*1024
             }
             
             return n;

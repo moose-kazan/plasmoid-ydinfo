@@ -1,3 +1,9 @@
+plasmoid-ydinfo (0.0.7-ppa1) jammy; urgency=medium
+
+  * Fixed bug with incorrect progressbar value in some cases
+
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Tue, 24 Oct 2023 21:30:00 +0300
+
 plasmoid-ydinfo (0.0.6-ppa1) jammy; urgency=medium
 
   * Added dutch translation. Thanks to Heimen Stoffels <vistausss@fastmail.com>
