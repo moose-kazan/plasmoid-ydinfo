@@ -16,9 +16,8 @@ PlasmoidItem {
     property real valueOpacity: 0
     property string yandexDiskDirectory: ''
 
-    switchHeight: 100
+    switchHeight: 80
     switchWidth: 400
-    preferredRepresentation: Plasmoid.fullRepresentation
     compactRepresentation: RowLayout {
         anchors.fill: parent
         Image {
@@ -46,7 +45,6 @@ PlasmoidItem {
             Layout.fillWidth: true
             Layout.leftMargin: 0
             Layout.rightMargin: 0
-            minimumWidth: 150
             from: 0
             to: 100
             value: valueOpacity
