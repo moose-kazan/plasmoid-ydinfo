@@ -1,3 +1,9 @@
+v0.0.8 (2025-08-29) Vadim Kalinnikov <moose@ylsoftware.com>
+    * Ported to KF6
+
+v0.0.7 (2023-10-24) Vadim Kalinnikov <moose@ylsoftware.com>
+    * Fixed bug with incorrect progressbar value in some cases
+
 v0.0.6 (2023-07-26) Vadim Kalinnikov <moose@ylsoftware.com>
     * Added dutch translation. Thanks to Heimen Stoffels <vistausss@fastmail.com>
     * Improved some translations

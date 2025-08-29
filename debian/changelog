@@ -1,3 +1,9 @@
+plasmoid-ydinfo (0.0.8-ppa1) questing; urgency=medium
+
+  * Ported to KF6
+
+ -- Vadim Kalinnikov <moose@ylsoftware.com>  Tue, 29 Aug 2025 01:45:00 +0300
+
 plasmoid-ydinfo (0.0.7-ppa1) jammy; urgency=medium
 
   * Fixed bug with incorrect progressbar value in some cases

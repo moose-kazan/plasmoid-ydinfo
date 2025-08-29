@@ -5,20 +5,21 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.plasma5support as Plasma5Support
 
-Item {
+PlasmoidItem {
     property string valueUsed: ''
     property string valueTotal: ''
     property real valueOpacity: 0
     property string yandexDiskDirectory: ''
 
-    Plasmoid.switchHeight: 100
-    Plasmoid.switchWidth: 400
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.compactRepresentation: RowLayout {
+    switchHeight: 100
+    switchWidth: 400
+    preferredRepresentation: Plasmoid.fullRepresentation
+    compactRepresentation: RowLayout {
         anchors.fill: parent
         Image {
             id: compactLogo
@@ -45,13 +46,14 @@ Item {
             Layout.fillWidth: true
             Layout.leftMargin: 0
             Layout.rightMargin: 0
-            minimumValue: 0
-            maximumValue: 100
+            minimumWidth: 150
+            from: 0
+            to: 100
             value: valueOpacity
         }
     }
 
-    Plasmoid.fullRepresentation: GridLayout {
+    fullRepresentation: GridLayout {
         anchors.fill: parent
         rows: 4
         columns: 2
@@ -113,13 +115,13 @@ Item {
             Layout.row: 3
             Layout.column: 0
             Layout.fillWidth: true
-            minimumValue: 0
-            maximumValue: 100
+            from: 0
+            to: 100
             value: valueOpacity
         }
     }
 
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: ydStatus
         engine: "executable"
         interval: Plasmoid.configuration.UpdateInterval*60000

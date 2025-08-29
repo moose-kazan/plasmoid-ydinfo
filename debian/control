@@ -2,7 +2,7 @@ Source: plasmoid-ydinfo
 Section: utils
 Priority: optional
 Maintainer: Vadim Kalinnikov <moose@ylsoftware.com>
-Build-Depends: debhelper (>= 7), cmake, extra-cmake-modules, libkf5plasma-dev, plasma-framework, pkg-kde-tools
+Build-Depends: debhelper (>= 7), cmake, extra-cmake-modules, libplasma-dev, plasma-framework, pkg-kde-tools
 Standards-Version: 4.5.0
 Homepage: https://github.com/moose-kazan/plasmoid-ydinfo
 Vcs-Git: https://github.com/moose-kazan/plasmoid-ydinfo.git
