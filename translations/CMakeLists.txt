@@ -8,6 +8,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
         SET(catalogname plasma_applet_com.ylsoftware.plasma.ydinfo)
+        SET(LOCALE_INSTALL_DIR "${CMAKE_INSTALL_DATADIR}/locale")
 
         FILE(GLOB PO_FILES po/*.po)
         SET(GMO_FILES)
