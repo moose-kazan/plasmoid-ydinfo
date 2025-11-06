@@ -12,7 +12,7 @@
         "Description": "Show info about your Yandex.Disk account",
         "Description[ru]": "Отображает информацию о вашем аккаунте \"Яндекс.Диск\"",
         "EnabledByDefault": true,
-        "Icon": "images/yandexdisk.svg",
+        "Icon": "plasmoid-ydinfo",
         "Id": "com.ylsoftware.plasma.ydinfo",
         "License": "LGPL-2.1+",
         "Name": "Yandex.Disk Info",

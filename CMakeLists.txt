@@ -17,6 +17,7 @@ set(CPACK_PROJECT_NAME "plasmoid-ydinfo")
 
 add_subdirectory(translations)
 
+install(FILES plasmoid-ydinfo.svg DESTINATION share/pixmaps/)
 plasma_install_package(package com.ylsoftware.plasma.ydinfo)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
