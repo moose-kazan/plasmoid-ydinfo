@@ -2,3 +2,4 @@ build
 .kdev4/
 plasmoid-ydinfo.kdev4
 debian/files
+release
