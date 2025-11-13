@@ -1,10 +1,11 @@
-set(CPACK_PACKAGE_NAME ${PROJECT_NAME}
-    CACHE STRING "The resulting package name"
-)
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Simple Plasma Applet for Yandex.Disk."
-    CACHE STRING "Package description for the package metadata"
-)
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Simple Plasma Applet for Yandex.Disk.")
+
+set(CPACK_PACKAGE_DESCRIPTION "Simple Plasma Applet for Yandex.Disk.\nThis applet show info about used and total space of your Yandex.Disk account.\n")
+set(CPACK_RPM_PACKAGE_DESCRIPTION ${CPACK_PACKAGE_DESCRIPTION})
+
 set(CPACK_PACKAGE_VENDOR "Vadim Kalinnikov")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/moose-kazan/plasmoid-ydinfo")
 
 set(CPACK_VERBATIM_VARIABLES YES)
 
@@ -21,6 +22,13 @@ set(CPACK_PACKAGING_INSTALL_PREFIX "/usr")#/${CMAKE_PROJECT_VERSION}")
 set(CPACK_PACKAGE_CONTACT "moose@ylsoftware.com")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Vadim Kalinnikov")
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS "ON")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "plasma-desktop >= 6.0")
+set(CPACK_DEBIAN_PACKAGE_RECOMMENDS "yandex-disk")
+set(CPACK_DEBIAN_PACKAGE_SECTION "kde")
+
+set(CPACK_RPM_PACKAGE_LICENSE "LGPL-2.1")
+set(CPACK_RPM_PACKAGE_REQUIRES "plasma-desktop >= 6.0")
+set(CPACK_RPM_PACKAGE_RECOMMENDS "yandex-disk")
 
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSES/LGPL-2.1-or-later.txt")
 set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
