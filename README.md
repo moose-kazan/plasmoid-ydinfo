@@ -17,10 +17,10 @@
 
 #### Из исходного кода ####
 
-На Ubuntu 20.04+ и подобных дистрибутивах:
+На Ubuntu 24.04+ и подобных дистрибутивах:
 
 1. Склонировать репозиторий
-2. apt install cmake extra-cmake-modules libkf5plasma-dev plasma-framework pkg-kde-tools
+2. apt install cmake extra-cmake-modules libplasma-dev plasma-framework pkg-kde-tools
 3. mkdir -p build && cd build
 3. cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 4. make && make install
@@ -48,10 +48,10 @@ It just run "yandex-disk status" every five minutes and parse output.
 
 #### From source code ####
 
-On Ubuntu 20.04+ and derivatives:
+On Ubuntu 24.04+ and derivatives:
 
 1. Clone this repository
-2. apt install cmake extra-cmake-modules libkf5plasma-dev plasma-framework pkg-kde-tools
+2. apt install cmake extra-cmake-modules libplasma-dev plasma-framework pkg-kde-tools
 3. mkdir -p build && cd build
 3. cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 4. make && make install
